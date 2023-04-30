@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>DOT OneCloud Workload Placement Town Plan</title>
+<title>Workload Placement Plan</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 <!-- <link rel="stylesheet" href="movements.css" /> -->
@@ -67,7 +67,7 @@
             border-radius: 5px;
             font-family: Calibri;
 
-            border-style: dotted;
+            border-style: OrgUnitted;
             border-color: darkorange;
             border-width: 20;
         }
@@ -99,7 +99,7 @@
             border-radius: 5px;
             font-family: Calibri;
 
-            border-style: dotted;
+            border-style: OrgUnitted;
             border-color: blue;
             border-width: 20;
         }
@@ -122,7 +122,7 @@
             border-width: 20;
         }
 
-        /* Cloud Provider CBA Layer 2 style */
+        /* Cloud Provider Org Layer 2 style */
         .flex-container2Cb {
             display: flex;
             justify-content: center;
@@ -131,14 +131,14 @@
             border-radius: 5px;
             font-family: Calibri;
 
-            border-style: dotted;
+            border-style: OrgUnitted;
             border-color: Yellow;
             border-width: 20;
 
 
         }
 
-        /* Cloud Provider CBA Layer 2 style */
+        /* Cloud Provider Org Layer 2 style */
         .flex-container2Cb>div {
             background-color: rgb(201, 192, 113);
             width: 22%;
@@ -271,7 +271,6 @@
 </head>
 
 <body onload="toggleOff()">
-    <!-- <h4 style="text-align: center">DOT OneCloud Workload Placement (Town Plan) - Deployment Model</h4> -->
 
     <script type="text/JavaScript">
           function toggleOff() {
@@ -332,7 +331,7 @@
 
     <!-- Top Navigation Menu -->
     <div class="topnav ">
-        <a href="#home" class="active">CBA One Cloud Gen 2 - DOT Workspace Capability Map</a>
+        <a href="#home" class="active">Org One Cloud Gen 2 - OrgUnit Workspace Capability Map</a>
         <!-- Navigation links (hidden by default) -->
         <div id="myLinks">
             <!-- <a href="javascript:toggleCSS('movements')">Toggle Movements</a> -->
@@ -563,7 +562,7 @@
                     <a href="https://azure.microsoft.com/services/service-bus/" target="_blank">Service Bus</a>
                 </div>
                 <div class="flts PaaSComm DN-NYP">
-                    <a>CBA Managed Kafka (TBD)</a>
+                    <a>On-Prem Managed Kafka (TBD)</a>
                 </div>
             </div>
             <div style="flex-grow: 1" class="flex-container3">
@@ -607,13 +606,7 @@
             </div>
 
         </div>
-        <!-- <div style="flex-grow: 10" class="flex-container2Cb">
-            <p class="title2" style="color:white">CBA</p>
-            <div style="flex-grow: 1" class="flex-container3 ">
-                <p class="title2">???</p>
-                <div class="flts DDN PaaS hide"><a href="" target="_blank"></a></div>
-            </div>
-        </div> -->
+
 
     </div>
     <!--     
@@ -681,24 +674,17 @@
             </div>
         </div>
 
-        <!-- CBA -->
-        <!-- <div style="flex-grow: 10" class="flex-container2Cb">
-            <p class="title2" style="color:white">CBA</p>
-            <div style="flex-grow: 1" class="flex-container3 ">
-                <p class="title2">???</p>
-                <div class="flts DDN PaaS hide"><a href="" target="_blank"></a></div>
-            </div>
-        </div> -->
+
     </div>
 <!-- LEGEND -->
     <div class="flex-container">
         <p style="color:grey" class="title1V"></p>
-        <div style="flex-grow: 1;border-style:dotted;background-color:lightgrey" class="flex-container2">
+        <div style="flex-grow: 1;border-style:OrgUnitted;background-color:lightgrey" class="flex-container2">
 
             <p class="title2" style="color:black; font-size: larger;">Capability Legend</p>
             <div style="flex-grow: 1;border-style:none;background-color:lightgrey" class="flex-container3-legend">
                 <!-- <p class="title2">Capability</p> -->
-                <div style="background-color: rgb(201, 192, 113);" class="flts">CBA</div>
+                <div style="background-color: rgb(201, 192, 113);" class="flts">On-Prem</div>
                 <div style="background-color: rgb(230, 171, 109);" class="flts">
                     AWS
                 </div>
@@ -706,12 +692,12 @@
                     Azure
                 </div>
                 <div style="background-color: white;" class="flts">
-                    OneCloud Tech Service (AWS, Azure)
+                    Tech Services (AWS, Azure)
                 </div>
             </div>
         </div>
 
-        <div style="flex-grow: 1;border-style:dotted;background-color:lightgrey" class="flex-container2">
+        <div style="flex-grow: 1;border-style:OrgUnitted;background-color:lightgrey" class="flex-container2">
             <p class="title2" style="color:black; font-size: larger;">Tech Service Legend</p>
             
             <div style="flex-grow: 1;border-style:none;background-color:lightgrey" class="flex-container3-legend">
@@ -723,12 +709,12 @@
                 <div class="flts whitelisted-commodity-service" style="background-color: lightgrey; color:black; font-size: larger;">Commodity Service</div>
                 <div class="flts whitelisted-non-commodity-service" style="background-color: lightgrey; color:black; font-size: larger;">. Non Commodity Service</div>
 
-                <div class="flts DDN">DOT Does Not Need Tech Service</div>
-                <div class="flts DN-NYP">DOT Does Need these Tech Services - not yet planned by OneCloud and DP</div>
-                <div class="flts DN-P">DOT Does Need these Tech Services - already planned by OneCloud and DP</div>
-                <div class="flts DN-WIP">DOT Does Need these Tech Services - planned and in progress by OneCloud and DP</div>
-                <div class="flts DN-A">DOT Does Need these Tech Services - already available by OneCloud and DP</div>
-                <div class="flts DTBD">DOT TBD whether or not they need these Tech Services</div>
+                <div class="flts DDN">OrgUnit Does Not Need Tech Service</div>
+                <div class="flts DN-NYP">OrgUnit Does Need these Tech Services - not yet planned by OneCloud and DP</div>
+                <div class="flts DN-P">OrgUnit Does Need these Tech Services - already planned by OneCloud and DP</div>
+                <div class="flts DN-WIP">OrgUnit Does Need these Tech Services - planned and in progress by OneCloud and DP</div>
+                <div class="flts DN-A">OrgUnit Does Need these Tech Services - already available by OneCloud and DP</div>
+                <div class="flts DTBD">OrgUnit TBD whether or not they need these Tech Services</div>
             </div>
         </div>
         <p class="title2" style="color:black">LEGEND</p>

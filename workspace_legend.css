@@ -108,28 +108,28 @@
     /* display:none; */
 }
 
-/* Does Need these Tech Services - not yet planned by OneCloud and DP */
+/* Does Need these Tech Services - not yet planned by OrgUnitCloud */
 .DN-NYP
 {
     background-color: rgba(255, 166, 0, 0.5);
     /* display:none; */
 }
 
-/* Does Need these Tech Services - already planned by OneCloud and DP */
+/* Does Need these Tech Services - already planned by OrgUnitCloud */
 .DN-P
 {
     background-color: rgba(255, 255, 0, 0.5);
     /* display:none; */
 }
 
-/* Does Need these Tech Services - planned and in progress by OneCloud and DP */
+/* Does Need these Tech Services - planned and in progress by OrgUnitCloud */
 .DN-WIP
 {
     background-color: rgba(0, 128, 0, 0.5);
     /* display:none; */
 }
 
-/* Does Need these Tech Services - already available by OneCloud and DP */
+/* Does Need these Tech Services - already available by OrgUnitCloud */
 .DN-A
 {
     background-color: rgba(0, 0, 255, 0.5);
