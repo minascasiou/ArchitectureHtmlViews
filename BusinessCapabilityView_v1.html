@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<title>Business Capability View v1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head>
+    <style>
+        .flex-container {
+            display: flex;
+            background-color: white;
+            flex-flow: row wrap;
+            border-radius: 5px;
+            font-family: Calibri;
+            margin: 3px;
+            align-content: space-between;
+        }
+
+        .flex-container2 {
+            display: flex;
+            justify-content: center;
+            background-color: Red;
+            flex-flow: row wrap;
+            border-radius: 5px;
+            font-family: Calibri;
+        }
+
+        .flex-container2V {
+            display: flex;
+            justify-content: center;
+            background-color: Red;
+            flex-flow: row wrap;
+            border-radius: 5px;
+            font-family: Calibri;
+            transform: rotate(-90.0deg);
+        }
+
+        .flex-container3 {
+            display: flex;
+            background-color: Green;
+            flex-flow: row wrap;
+            align-content: stretch;
+            border-radius: 5px;
+            align-items: center;
+            font-family: Calibri;
+        }
+
+        .flex-container>div {
+            background-color: rgb(150, 180, 215);
+            width: 40px;
+            margin: 3px;
+            text-align: center;
+            line-height: 2px;
+            font-size: 14px;
+            font-family: Calibri;
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+
+        .flex-container2>div {
+            background-color: rgb(220, 230, 240);
+            width: 10%;
+            margin: 2px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            font-family: Calibri;
+            align-items: space-between;
+            align-content: baseline;
+            padding: 5px;
+
+        }
+
+        .flex-container2V>div {
+            background-color: rgb(148, 178, 233);
+            width: 100px;
+            margin: 2px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            font-family: Calibri;
+            align-items: space-between;
+            align-content: baseline;
+            padding: 5px;
+            transform: rotate(-90.0deg);
+
+        }
+
+        .flex-container3>div {
+            white-space: pre-line;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background-color: white;
+            min-width: 20%;
+            min-width: 40px;
+            max-width: 45%;
+            width: 80px;
+            height: 30px;
+            margin: 2px;
+            text-align: center;
+            line-height: 10px;
+            font-size: 10px;
+            font-family: Calibri;
+            border-radius: 5px;
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+
+        .title {
+            flex: 100%;
+            background-color: rgb(166, 201, 255);
+            padding: 0px;
+            font-size: 16px;
+            line-height: 10px;
+            text-align: center;
+        }
+
+        .title1 {
+            flex: 100%;
+            color: Black;
+            padding: 0px;
+            font-size: 16px;
+            line-height: 0px;
+            text-align: center;
+        }
+
+        .title2 {
+            flex: 100%;
+            color: black;
+            padding: 0px;
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        .title2V {
+            flex: 100%;
+            background-color: rgb(11, 62, 114);
+            color: white;
+            font-size: 16px;
+            align-content: stretch;
+            transform: rotate(-90.0deg);
+        }
+
+        p.small {
+            line-height: 0.7;
+        }
+
+        p.big {
+            line-height: 1.8;
+        }
+
+        .fl3 {
+            align-items: center;
+            flex-shrink: 1;
+        }
+
+        a {
+            color: blue;
+            font-size: 8px;
+        }
+
+        .title1V {
+            color: blue;
+            font-size: 12px;
+            width: 50px;
+            height: 0px;
+            background-color: white;
+            text-align: left;
+            margin: -10px;
+            transform: rotate(-90.0deg) translateX(-75px);
+        }
+
+        div.a {
+            width: 60px;
+            height: 30px;
+            transform: rotate(-90.0deg);
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <script>
+            function myFunction(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
+
+        <div class="flex-container">
+            <p class="title1V">CHANNELS</p>
+            <div style="flex-grow: 3" class="flex-container2">
+                <p class="title2">Self Service B2C Family</p>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Retail Customer Channel</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Business Banking Customer Channel</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Broker Channel Channel</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+            </div>
+            <div style="flex-grow: 3" class="flex-container2">
+                <p class="title2">Assisted Family</p>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Workforce Management</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Staff Channels</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Contact Centre</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container2">
+                <p class="title2">B2B Family</p>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Open Banking</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-container">
+            <p class="title1V">DISTRIBUTION</p>
+            <div style="flex-grow: 3" class="flex-container2">
+                <p class="title2">Distribution Servicing Family</p>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Sales</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Marketing</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Eligibility</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Pricing</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+            </div>
+            <div style="flex-grow: 3" class="flex-container2">
+                <p class="title2">Distribution Customer Family</p>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Staff-IDAM</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Customer IDAM</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="flex-container">
+            <p class="title1V">ASSEMBLY</p>
+            <div style="flex-grow: 1" class="flex-container2">
+                <p class="title2">Assembly Family</p>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Group Business Capabilities</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Risk Management</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Technology Capabilities</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Integration</p>
+                    <div class="fl3">Event Hubs</div>
+                    <div class="fl3">API's and Web Services</div>
+                    <div class="fl3">Workflows and Orchestrations</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-container">
+            <p class="title1V">MANUFACTURING</p>
+            <div style="flex-grow: 1" class="flex-container2">
+                <p class="title2">Manufacturing Family</p>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Business Domain 1</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Business Domain 2</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Business Domain 3</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Business Domain 4</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Business Domain 5</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Business Domain 6</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Business Domain 7</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-container">
+            <p class="title1V">SUPPORT</p>
+            <div style="flex-grow: 1" class="flex-container2">
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Reporting and Analytics</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">DevTooling</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">CI/CD & DevOps</p>
+                    <div class="fl3">Continuous Integration</div>
+                    <div class="fl3">Continuous Deployment</div>
+                    <div class="fl3">Continuous Compliance Controls</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Business Monitoring and Alerting</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Systems Monitoring and Alerting</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2">Observability - Metrics, Traces & Logs</p>
+                    <div class="fl3">Capability 1</div>
+                    <div class="fl3">Capability 2</div>
+                    <div class="fl3">Capability 3</div>
+                </div>
+
+            </div>
+    </body>
+
+</html>

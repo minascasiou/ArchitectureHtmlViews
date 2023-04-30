@@ -1,0 +1,23 @@
+.SaasApp {
+    color: blue;
+    background-color: lightblue;
+    #display:none;
+
+}
+
+.ToBeConfirmedApp {
+    color: brown;
+    background-color: orange;
+}
+
+.MayBeFederatedApp {
+    background-color: peachpuff;
+    color: brown;
+}
+
+.DeprecatedApp {
+    background-color: pink;
+    color: purple;    
+}
+
+

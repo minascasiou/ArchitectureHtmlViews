@@ -1,0 +1,48 @@
+
+        
+        
+        
+        .Aws {
+            color: orange;
+            background-image: url(aws.jpg);
+            background-repeat: no-repeat;
+            background-size: 10px 10px;
+        }
+        .AwsApp>div {
+            background-image: url(aws.jpg);
+            background-repeat: no-repeat;
+            background-size: 10px 10px;
+        }
+        .Aws>div {
+            color: orange;
+            background-image: url(aws.jpg);
+            background-repeat: no-repeat;
+            background-size: 10px 10px;
+        }
+
+        .AwsApp {
+             background-color: orange;
+             background-image: url(aws.jpg);
+             background-size: 10px 10px;
+             background-repeat: no-repeat;
+        }
+
+        .Azure {
+            color: blue;
+            background-image: url(azure.jpg);
+            background-repeat: no-repeat;
+            background-size: 10px 10px;
+        }
+        .Azure>div {
+          
+        }
+        .AzureApp {
+            background-image: url(azure.jpg);
+            background-repeat: no-repeat;
+            background-size: 10px 10px;
+        }
+
+        .AzureApp>div {
+        }
+
+       

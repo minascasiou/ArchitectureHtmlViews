@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<title>Application and Capability Deployment View v1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="diagram.css">
+<link rel="stylesheet" href="clouds_h1.css">
+<link rel="stylesheet" href="hide.css">
+<link rel="stylesheet" href="legend_highlight.css">
+<link rel="stylesheet" href="workspaces.css">
+
+<!--menu-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <style>
+        v a {
+            color: green;
+            font-size: 8px;
+            text-align: center;
+            position: relative;
+        }
+
+        .title1V {
+            color: green;
+            font-size: 12px;
+            width: 50px;
+            height: 0px;
+            background-color: white;
+            text-align: left;
+            margin: -10px;
+            transform: rotate(-90.0deg) translateX(-65px);
+        }
+
+        /*Supply Chain layers*/
+        div.a {
+            width: 60px;
+            height: 30px;
+            transform: rotate(-90.0deg);
+            color: green;
+        }
+
+        /* menu start */
+        /* Style the navigation menu */
+        .topnav {
+            overflow: hidden;
+            background-color: rgb(235, 240, 220);
+            background-color: black;
+            position: relative;
+        }
+
+        /* Hide the links inside the navigation menu (except for logo/home) */
+        .topnav #myLinks {
+            display: none;
+        }
+
+        /* Style navigation menu links */
+        .topnav a {
+            color: white;
+            padding: 10px 12px;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+        }
+
+        /* Style the hamburger menu */
+        .topnav a.icon {
+            background: black;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        /* Add a grey background color on mouse-over */
+        .topnav a:hover {
+            background-color: lavender;
+            color: black;
+        }
+
+        /* Style the active link (or home/logo) */
+        .active {
+            background-color: rgb(195, 215, 155);
+            color: white;
+        }
+
+        /* menu end */
+    </style>
+</head>
+
+<body onload="toggleOff()">
+    <script type="text/JavaScript">
+            function toggleOff() {
+                var stylesheets = document.styleSheets;
+                var length = stylesheets.length;
+                var i;
+                
+                for (i = 0; i < length; i++) {
+                    var ss = stylesheets[i];
+                    if (ss.href.includes("clouds_h1") 
+                        || ss.href.includes("legend_highlight") 
+                        )
+                    {
+                        ss.disabled = ss.disabled ==true?false:true;
+                    }
+                }
+            }
+
+            function toggleCSS(cssFileName) {
+                var stylesheets = document.styleSheets;
+                var length = stylesheets.length;
+                var i;
+                
+                for (i = 0; i < length; i++) {
+                    var ss = stylesheets[i];
+                    if (ss.href.includes(cssFileName))
+                    {
+                        ss.disabled = ss.disabled ==true?false:true;
+                    }
+                }
+            }
+          
+            function myFunction(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+
+        /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+        </script>
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav ">
+        <a href="#home" class="active">Application and Capability Deployment View v1</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a href="javascript:toggleCSS('clouds_h1')">Toggle Clouds Horizon 1</a>
+            <a href="javascript:toggleCSS('hide.')">Toggle Hide Saas and TBC Assets</a>
+            <a href="javascript:toggleCSS('legend_highlight')">Toggle Legend Highlights Layer</a>
+            <a href="javascript:toggleCSS('workspaces')">Toggle Workspaces Layer</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="flex-container">
+        <p class="title1V">CHANNELS</p>
+        <div style="flex-grow: 10" class="flex-container2">
+            <p class="title2">Self Service Family</p>
+            <!--second level-->
+            <div class="Azure flex-container25">
+                <p class="title2">Retail Customer Channel</p>
+                <div style="flex-grow: 10" class="Azure flex-container3">
+                    <!--third level-->
+                    <p class="title2 workspace-title">Retail Customer Channel - Workspace 1</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+                <div style="flex-grow: 10" class="Azure flex-container3">
+                    <p class="title2 workspace-title">Retail Customer Channel - Workspace 2</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+            <div class="Azure flex-container25">
+                <p class="title2">Business Banking Customer Channel</p>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2 workspace-title">Business Banking Customer Channe Workspace</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+            <div class="Azure flex-container25">
+                <p class="title2">Broker Channel Channel</p>
+                <div style="flex-grow: 1" class="Azure flex-container3">
+                    <p class="title2 workspace-title">Broker Channel Channel Workspace</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+        </div>
+        <div style="flex-grow: 10" class="flex-container2">
+            <p class="title2">Assisted Family</p>
+            <div class="Azure flex-container25">
+                <p class="title2">Staff-IDAM</p>
+                <div style="flex-grow: 1" class="Aws flex-container3">
+                    <p class="title2 workspace-title">Staff-IDAM Workspace</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+            <div class="Azure flex-container25">
+                <p class="title2">Staff Channels</p>
+
+                <div style="flex-grow: 1" class="Aws flex-container3">
+                    <p class="title2 workspace-title">Staff Channels Workspace 1</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+                <div style="flex-grow: 1" class="Aws flex-container3">
+                    <p class="title2 workspace-title">Staff Channels Workspace 1</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+            <div class="Azure flex-container25">
+                <p class="title2">Contact Centre</p>
+                <div style="flex-grow: 1" class="Aws flex-container3">
+                    <p class="title2 workspace-title">Contact Centre Workspace</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+            <div class="Azure flex-container25">
+                <p class="title2">Workforce Management</p>
+                <div style="flex-shrink: 1" class="Aws flex-container3">
+                    <p class="title2 workspace-title">Workforce Management Workspace</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+            <div class="Azure flex-container25">
+                <p class="title2">Sales Pipeline Management</p>
+
+                <div style="flex-shrink: 1" class="flex-container3">
+                    <p class="title2 workspace-title">Sales Pipeline Management Workspace</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+        </div>
+        <div style="flex-grow: 1" class="flex-container2">
+            <p class="title2">B2B Family</p>
+            <div style="flex-grow: 1" class="Azure flex-container25">
+                <p class="title2">B2B</p>
+                <div class="Aws flex-container3">
+                    <p class="title2 workspace-title">B2B Workspace</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="flex-container">
+        <p class="title1V">DISTRIBUTION</p>
+        <div style="flex-grow: 1" class="flex-container2">
+
+            <div style="flex-grow: 0.2" class="Azure flex-container25">
+                <p class="title2">Distribution - Customer</p>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2 workspace-title">Customer Workspace</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <p class="title1V">ASSEMBLY</p>
+        <!--first level-->
+        <div style="flex-grow: 1" class="flex-container2">
+            <p class="title2">Assembly Family</p>
+            <!--second level-->
+            <div style="flex-grow: 1" class="Azure flex-container25">
+                <p class="title2">Risk Management</p>
+                <div style="flex-grow: 1" class="Aws flex-container3">
+                    <p class="title2 workspace-title">Risk Management Workspace</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="Azure flex-container25">
+                <p class="title2">Technology Apps</p>
+                <div style="flex-grow: 1" class="Aws flex-container3">
+                    <p class="title2 workspace-title">Technology Apps Workspace</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3 IsFederatedApp">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="Azure flex-container25">
+                <p class="title2">Integration</p>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2 workspace-title">Integration Workspace</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <p class="title1V">MANUFACTURING</p>
+        <!--first level-->
+        <div style="flex-grow: 1" class="flex-container2">
+            <p class="title2">Retail Manufacturing Family</p>
+            <!--second level-->
+            <div style="flex-grow: 1" class="Azure flex-container25">
+                <p class="title2">Core Banking</p>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2 workspace-title">Core Banking Workspace</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="Azure flex-container25">
+                <p class="title2">Deposits and Transactions - Other</p>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="Azure flex-container25">
+                <p class="title2">Lending</p>
+                <div style="flex-grow: 1" class="flex-container3">
+                    <p class="title2 workspace-title">Lending Workspace</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="Azure flex-container25">
+                <p class="title2">Insurance & Advice</p>
+                <div style="flex-grow: 0.4" class="flex-container3">
+                    <p class="title2 workspace-title">Insurance & Advice Workspace</p>
+                    <div class="fl3">App 1</div>
+                    <div class="fl3">App 2</div>
+                    <div class="fl3">App 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="flex-container hide"> -->
+    <div class="flex-container">
+        <!--first level-->
+        <p class="title1V">SUPPORT</p>
+        <div style="flex-grow: 1; background-color: grey" class="flex-container2">
+            <!--second level-->
+            <div style="flex-grow: 1; background-color: lightgrey" class="flex-container3">
+                <!--third level-->
+                <p class="title2">Information Technology Services</p>
+                <div class="fl3">App 1</div>
+                <div class="fl3">App 2</div>
+                <div class="fl3">App 3</div>
+            </div>
+            <div style="flex-grow: 1; background-color: lightgrey" class="flex-container3">
+                <!--third level-->
+                <p class="title2">Reporting and Analytics</p>
+                <div class="fl3">App 1</div>
+                <div class="fl3">App 2</div>
+                <div class="fl3">App 3</div>
+            </div>
+            <div style="flex-grow: 1; background-color: lightgrey" class="flex-container3 techLayer2 techLayer2-hide">
+                <p class="title2">DevTooling</p>
+                <div class="fl3 IsFederatedTechnologyApp ">App 1</div>
+                <div class="fl3">App 2</div>
+                <div class="fl3">App 3</div>
+            </div>
+            <div style="flex-grow: 1;background-color: lightgrey" class="flex-container3">
+                <p class="title2">Business Monitoring and Alerting</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <!--first level-->
+        <p style="color:grey" class="title1V"></p>
+        <div style="flex-grow: 0.4;border-style:none;background-color:grey" class="flex-container2">
+            <!--second level-->
+            <div style="flex-grow: 1;border-style:none;background-color:grey" class="flex-container3-legend">
+                <!--third level-->
+                <div style="background-color: rgb(195, 215, 155);" class="fl3">Hosting Family (isolated
+                    boundary)</div>
+                <div style="background-color: rgb(235, 240, 220); background-image: url(integration.jpg); background-repeat: no-repeat; background-size: 10px 10px;border-style:solid; border-color: darkgreen; border-width: 20;"
+                    class="fl3">Host Inst (incl ECP)</div>
+                <div style="background-color: white;" class="fl3">Application</div>
+                <div class="fl3 IsFederatedApp">Is federated</div>
+                <div class="fl3 IsFederatedTechnologyApp">Is federated tech</div>
+                <div class="workspace">Workspace</div>
+                <div class="fl3 SaasApp hide">SAAS</div>
+                <div class="fl3 ToBeConfirmedApp hide">To be confirmed</div>
+                <div class="fl3 MayBeFederatedApp hide">Maybe federated</div>
+                <div class="fl3 DeprecatedApp hide">Deprecated</div>
+            </div>
+            <p class="title2" style="color:white">LEGEND</p>
+        </div>
+    </div>
+</body>
+
+</html>

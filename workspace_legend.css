@@ -1,0 +1,147 @@
+.whitelisted-commodity-service {
+    color: blue;
+    background-image: url(commodity.jpg);
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+}
+
+.whitelisted-non-commodity-service {
+    color: green;
+    background-image: url(non-commodity.jpg);
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+}
+
+.SaaS {
+    background-position: top left;
+    background-image: url(saas.jpg);
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+}
+
+.PaaS {
+    background-position: top left;
+    background-image: url(paas.jpg);
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+}
+
+.CaaS {
+    background-position: top left;
+    background-image: url(caas.jpg);
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+}
+
+.IaaS {
+    background-position: top left;
+    background-image: url(iaas.jpg);
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+}   
+
+
+.IaaSComm {
+    background: url(iaas.jpg) left top no-repeat, url(commodity.jpg) right top no-repeat;
+    padding: 0px;
+    background-size: 7px, 10px;
+    background-color: white;
+}
+
+.IaaSNonComm {
+    background: url(iaas.jpg) left top no-repeat, url(non-commodity.jpg) right top no-repeat;
+    padding: 0px;
+    background-size: 7px, 10px;
+    background-color: white;
+}
+
+.CaaSComm {
+    background: url(caas.jpg) left top no-repeat, url(commodity.jpg) right top no-repeat;
+    padding: 0px;
+    background-size: 7px, 10px;
+    background-color: white;
+}
+
+.CaaSNonComm {
+    background: url(caas.jpg) left top no-repeat, url(non-commodity.jpg) right top no-repeat;
+    padding: 0px;
+    background-size: 7px, 10px;
+    background-color: white;
+}
+
+
+.PaaSComm {
+    background: url(paas.jpg) left top no-repeat, url(commodity.jpg) right top no-repeat;
+    padding: 0px;
+    background-size: 7px, 10px;
+    background-color: white;
+    vertical-align: text-top;
+}
+
+.PaaSNonComm {
+    background: url(paas.jpg) left top no-repeat, url(non-commodity.jpg) right top no-repeat;
+    padding: 0px;
+    background-size: 7px, 10px;
+    background-color: white;
+}
+
+
+.SaaSComm {
+    background: url(saas.jpg) left top no-repeat, url(commodity.jpg) right top no-repeat;
+    padding: 0px;
+    background-size: 7px, 10px;
+    background-color: white;
+}
+
+.SaaSNonComm {
+    background: url(saas.jpg) left top no-repeat, url(non-commodity.jpg) right top no-repeat;
+    padding: 0px;
+    background-size: 7px,10px;
+    background-color: white;
+}
+
+/* Don't Need these Tech Services */
+.DDN
+{
+    background-color: rgba(128, 128, 128, 0.5);
+
+    /* display:none; */
+}
+
+/* Does Need these Tech Services - not yet planned by OneCloud and DP */
+.DN-NYP
+{
+    background-color: rgba(255, 166, 0, 0.5);
+    /* display:none; */
+}
+
+/* Does Need these Tech Services - already planned by OneCloud and DP */
+.DN-P
+{
+    background-color: rgba(255, 255, 0, 0.5);
+    /* display:none; */
+}
+
+/* Does Need these Tech Services - planned and in progress by OneCloud and DP */
+.DN-WIP
+{
+    background-color: rgba(0, 128, 0, 0.5);
+    /* display:none; */
+}
+
+/* Does Need these Tech Services - already available by OneCloud and DP */
+.DN-A
+{
+    background-color: rgba(0, 0, 255, 0.5);
+    /* display:none; */
+}
+
+
+/* TBD these Tech Services */
+.DTBD
+{
+    background-color: rgba(238, 130, 238, 0.5);
+    /* display:none; */
+}
+
+

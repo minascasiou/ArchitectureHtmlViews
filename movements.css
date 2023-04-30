@@ -1,0 +1,48 @@
+#SaasApp {
+    color: darkgray;
+    background-color: grey;
+}
+
+.SaasApp {
+    color: darkgray;
+    background-color: grey;
+}
+
+.SaasApp>div {
+    background-color: grey;
+    color: darkgray;
+}
+
+.moved {
+    //color:lightgreen;
+    border-style:solid;
+    border-color:green;
+}
+.moved>div {
+    background-color:lightgreen;
+}
+#moved
+{
+    background-color:lightgreen;
+    //border: 1px dotted black;
+}
+
+#removed
+{
+    background-color:grey;
+    border: 1px dotted black;
+}
+#removedApp
+{
+    background-color:lightpink;
+    //border: 1px dotted black;
+}
+
+.removed {
+    border-style:solid;
+    border-color:red;
+}
+.removed>div {
+    background-color:lightpink;
+}
+

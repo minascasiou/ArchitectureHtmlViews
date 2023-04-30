@@ -1,0 +1,26 @@
+       /* Workspace style override - to remove*/
+       
+       .flex-container25>div {
+           background-color: rgb(235, 240, 220);
+           /* background-color: rgb(235, 240, 220); */
+           margin: 2px;
+           text-align: center;
+           line-height: 20px;
+           font-size: 12px;
+           font-family: Calibri;
+           align-items: space-between;
+           align-content: baseline;
+           padding: 5px;
+           border-style: none;
+       }
+       
+       .workspace-title {
+           display: none;
+       }
+
+
+       /*Hide workspace Legend*/
+       .workspace {
+        display:none;
+    }
+   

@@ -1,0 +1,12 @@
+.techLayer2{
+    border-style:solid;
+    border-color:purple;
+}
+.techLayer2>div {
+    background-color:rgba(174, 0, 255, 0.349);
+}
+
+#techLayer2App{
+    background-color:rgba(174, 0, 255, 0.349);
+}
+

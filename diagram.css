@@ -1,0 +1,306 @@
+.flex-container {
+    display: flex;
+    /* //justify-content: left; */
+    background-color: white;
+    /* //background-color: rgb(195, 215, 155); */
+    flex-flow: row wrap;
+    /* //align-content: stretch; */
+    border-radius: 5px;
+    font-family: Calibri;
+    margin: 3px;
+    /* //align-items: flex-start;
+    //align-items: space-between; */
+    align-content: space-between;
+}
+
+.flex-container2 {
+    display: flex;
+    justify-content: center;
+    background-color: Red;
+    flex-flow: row wrap;
+    border-radius: 5px;
+    font-family: Calibri;
+}
+
+.flex-container2V {
+    display: flex;
+    justify-content: center;
+    background-color: Red;
+    flex-flow: row wrap;
+    border-radius: 5px;
+    font-family: Calibri;
+    transform: rotate(-90.0deg);
+}
+
+/* Workspace Container stlye*/
+.flex-container25 {
+    display: flex;
+    background-color: white;
+    flex-flow: row wrap;
+    align-content: stretch;
+    border-radius: 5px;
+    align-items: center;
+    font-family: Calibri;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+}
+
+
+.flex-container3 {
+    display: flex;
+    background-color: Green;
+    flex-flow: row wrap;
+    align-content: stretch;
+    border-radius: 5px;
+    align-items: center;
+    font-family: Calibri;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.flex-container3>p {
+    background-image: url(integration.jpg);
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+}
+
+
+
+.flex-container>div {
+    background-color: rgb(195, 215, 155);
+    width: 40px;
+    margin: 3px;
+    text-align: center;
+    line-height: 2px;
+    font-size: 14px;
+    font-family: Calibri;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+/* Hosting Instance style */
+.flex-container2>div {
+    background-color: rgb(235, 240, 220);
+    width: 24%;
+    margin: 2px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    font-family: Calibri;
+    align-items: space-between;
+    align-content: baseline;
+    padding: 5px;
+    border-style:solid;
+    border-color: darkgreen;
+    border-width: 20;
+
+}
+
+/* Workspace style */
+.flex-container25>div {
+    /* background-color: rgba(236, 243, 171, 0.5); */
+    background-color:lavender;
+    /* background-color: rgba(162, 122, 172, 0.973); */
+    /* background-color: skyblue; */
+    /* background-color:rgb(199, 238, 149); */
+    /* background-color:rgb(238, 225, 149); */
+    /* border-color: yellowgreen; */
+
+
+
+    margin: 2px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    font-family: Calibri;
+    align-items: space-between;
+    align-content: baseline;
+    padding: 5px;
+    border-style:dotted;
+    border-color: black;
+    border-width: 20;
+}
+
+/*Workspace legend style*/
+.workspace {
+    /* background-color: rgba(162, 122, 172, 0.973); */
+    /* background-color:rgb(238, 225, 149); */
+    background-color:lavender;
+    border-style: dotted;
+    border-color: black;
+    border-width: 20;
+}
+
+
+/*Supply Chain Layer Title style*/
+.flex-container2V>div {
+    background-color: rgb(148, 178, 233);
+    width: 100px;
+    margin: 2px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    font-family: Calibri;
+    align-items: space-between;
+    align-content: baseline;
+    padding: 5px;
+    transform: rotate(-90.0deg);
+
+}
+
+/* Application style */
+.flex-container3>div {
+    white-space: pre-line;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    min-width: 20%;
+    min-width: 50px;
+    max-width: 45%;
+    width: 70px;
+    height: 22px;
+    margin: 2px;
+    text-align: center;
+    line-height: 10px;
+    font-size: 10px;
+    font-family: Calibri;
+    border-radius: 5px;
+    /* border-style:solid; */
+    /* border-color: black; */
+    border-width: 10;
+    /* background-color: white; */
+}
+
+/* Legend style */
+.flex-container3-legend {
+    display: flex;
+    background-color: black;
+    flex-flow: row wrap;
+    align-content: center;
+    border-radius: 5px;
+    align-items: center;
+    font-family: Calibri;
+    border-style: none;
+
+    justify-content: center;
+}
+
+.flex-container3-legend>div {
+    white-space: pre-line;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    min-width: 20%;
+    min-width: 160px;
+    max-width: 30%;
+    height: 20px;
+    margin: 2px;
+    text-align: center;
+    line-height: 10px;
+    font-size: 10px;
+    font-family: Calibri;
+    border-radius: 5px;
+    align-items: flex-start;
+    align-content: flex-start;
+
+}
+
+
+
+.title {
+    flex: 100%;
+    background-color: rgb(166, 201, 255);
+    padding: 0px;
+    font-size: 16px;
+    line-height: 10px;
+    text-align: center;
+}
+
+.title1 {
+    flex: 100%;
+    color: Black;
+    padding: 0px;
+    font-size: 16px;
+    line-height: 0px;
+    text-align: center;
+}
+
+.title2 {
+    flex: 100%;
+    color: black;
+    padding: 0px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.title2V {
+    flex: 100%;
+    color: black;
+    font-size: 16px;
+    transform: rotate(-90.0deg);
+}
+
+p.small {
+    line-height: 0.7;
+}
+
+p.big {
+    line-height: 1.8;
+}
+
+.fl25 {
+    align-items: center;
+    background-color: white;
+    /* flex-shrink: 1; */
+}
+
+.fl3 {
+    align-items: center;
+    background-color: white;
+    flex-shrink: 1;
+
+    
+    border-color: grey;
+    border-width: 1px;
+    border-style:  solid;
+}
+
+.fl4 {
+    align-items: center;
+    background-color:white;
+    flex-shrink: 1;
+}
+
+/*Flexgrid Tech Service rectangle*/
+.flts {
+    align-items: normal;
+    background-color: white;
+    flex-shrink: 1;
+    vertical-align: text-top;
+}
+
+a {
+    color: green;
+    text-decoration: none;
+}
+
+
+.IsFederatedApp {
+    background-color: darkgrey;
+    color: black;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.IsFederatedTechnologyApp {
+    background-color: lightgrey;
+    color: black;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}

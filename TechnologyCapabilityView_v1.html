@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+<title>DOT OneCloud Workload Placement Town Plan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<!-- <link rel="stylesheet" href="movements.css" /> -->
+<link rel="stylesheet" href="diagram.css" />
+<!-- <link rel="stylesheet" href="clouds_h1.css" /> -->
+<link rel="stylesheet" href="hide.css" />
+<!-- <link rel="stylesheet" href="tech_layer_2.css" /> -->
+<!-- <link rel="stylesheet" href="tech_layer_2_hide.css" /> -->
+<link rel="stylesheet" href="workspace_legend.css" />
+
+<!--menu-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<head>
+    <style>
+        a {
+            color: black;
+            font-size: 8px;
+            text-align: center;
+            position: relative;
+        }
+
+        .title1V {
+            color: green;
+            font-size: 12px;
+            width: 50px;
+            height: 0px;
+            background-color: white;
+            text-align: left;
+            margin: -10px;
+            transform: rotate(-90deg) translateX(-65px);
+        }
+
+        .flex-container {
+            background-color: white;
+            display: flex;
+            flex-flow: row wrap;
+            border-radius: 5px;
+            font-family: Calibri;
+            margin: 3px;
+            border-style: double;
+            text-align: center;
+        }
+
+        /* Cloud Provider Layer 1 style */
+        .flex-container>div {
+            background-color: black;
+            width: 40px;
+            margin: 3px;
+            text-align: center;
+            line-height: 2px;
+            font-size: 14px;
+            font-family: Calibri;
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+
+        /* Cloud Provider AWS Layer 2 style */
+        .flex-container2Aw {
+            display: flex;
+            justify-content: center;
+            background-color: Red;
+            flex-flow: row wrap;
+            border-radius: 5px;
+            font-family: Calibri;
+
+            border-style: dotted;
+            border-color: darkorange;
+            border-width: 20;
+        }
+
+        /* Cloud Provider AWS Layer 2 style */
+        .flex-container2Aw>div {
+            background-color: rgb(230, 171, 109);
+            width: 22%;
+            margin: 2px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            font-family: Calibri;
+            align-items: normal;
+            align-content: normal;
+            padding: 5px;
+
+            border-style: solid;
+            border-color: darkorange;
+            border-width: 20;
+        }
+
+        /* Cloud Provider Azure Layer 2 style */
+        .flex-container2Az {
+            display: flex;
+            justify-content: center;
+            background-color: Red;
+            flex-flow: row wrap;
+            border-radius: 5px;
+            font-family: Calibri;
+
+            border-style: dotted;
+            border-color: blue;
+            border-width: 20;
+        }
+
+        /* Cloud Provider Azure Layer 2 style */
+        .flex-container2Az>div {
+            background-color: rgb(138, 172, 197);
+            width: 22%;
+            margin: 2px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            font-family: Calibri;
+            align-items: space-between;
+            align-content: baseline;
+            padding: 5px;
+
+            border-style: solid;
+            border-color: darkblue;
+            border-width: 20;
+        }
+
+        /* Cloud Provider CBA Layer 2 style */
+        .flex-container2Cb {
+            display: flex;
+            justify-content: center;
+            background-color: Red;
+            flex-flow: row wrap;
+            border-radius: 5px;
+            font-family: Calibri;
+
+            border-style: dotted;
+            border-color: Yellow;
+            border-width: 20;
+
+
+        }
+
+        /* Cloud Provider CBA Layer 2 style */
+        .flex-container2Cb>div {
+            background-color: rgb(201, 192, 113);
+            width: 22%;
+            margin: 2px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            font-family: Calibri;
+            align-items: space-between;
+            align-content: baseline;
+            padding: 5px;
+
+            border-style: solid;
+            border-color: darkblue;
+            border-width: 20;
+        }
+
+        .title2 {
+            flex: 100%;
+            color: black;
+            justify-content: center;
+            //font-style: oblique;
+            padding: 0px;
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        /*Supply Chain layers*/
+        div.a {
+            width: 60px;
+            height: 30px;
+            transform: rotate(-90deg);
+            color: green;
+        }
+
+        /*Override default image and nullify*/
+        .flex-container3>p {
+            background-image: url(NO_IMAGE.jpg);
+            background-repeat: no-repeat;
+            background-size: 10px 10px;
+        }
+
+        .flex-container3 {
+            display: flex;
+            background-color: Green;
+            flex-flow: row wrap;
+            align-content: stretch;
+            border-radius: 5px;
+            align-items: center;
+            font-family: Calibri;
+            vertical-align: text-top;
+
+        }
+
+        /* Application style */
+        .flex-container3>div {
+            white-space: pre-line;
+            overflow: clip;
+            text-overflow: ellipsis;
+            min-width: 20%;
+            min-width: 60px;
+            max-width: 70%;
+            /* width: 102px; */
+            width: 47%;
+            height: 35px;
+            margin: 2px;
+            text-align: center;
+            vertical-align: text-top;
+            justify-content: center;
+            line-height: 10px;
+            font-size: 10px;
+            font-family: Calibri;
+            border-radius: 5px;
+            align-items: normal;
+            align-content: normal;
+        }
+
+        /* menu start */
+        /* Style the navigation menu */
+        .topnav {
+            overflow: hidden;
+            background-color: rgb(19, 19, 24);
+            position: relative;
+        }
+
+        /* Hide the links inside the navigation menu (except for logo/home) */
+        .topnav #myLinks {
+            display: none;
+        }
+
+        /* Style navigation menu links */
+        .topnav a {
+            color: white;
+            padding: 10px 12px;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+        }
+
+        /* Style the hamburger menu */
+        .topnav a.icon {
+            background: black;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        /* Add a grey background color on mouse-over */
+        .topnav a:hover {
+            background-color: #rgb(195, 215, 155);
+            color: blue;
+        }
+
+        /* Style the active link (or home/logo) */
+        .active {
+            background-color: black;
+            color: white;
+        }
+
+        /* menu end */
+    </style>
+</head>
+
+<body onload="toggleOff()">
+    <!-- <h4 style="text-align: center">DOT OneCloud Workload Placement (Town Plan) - Deployment Model</h4> -->
+
+    <script type="text/JavaScript">
+          function toggleOff() {
+              var stylesheets = document.styleSheets;
+              var length = stylesheets.length;
+              var i;
+
+              for (i = 0; i < length; i++) {
+                  var ss = stylesheets[i];
+                  if (//ss.href.includes("clouds_h1")
+                      //|| ss.href.includes("movements")
+                      //|| 
+                      ss.href==("hide.css")
+                      //|| ss.href.includes("tech_layer_2.")
+                      //|| ss.href.includes("tech_layer_2_hide")
+                      // || ss.href.includes("legend_highlight") don't hide on load
+                      )
+                  {
+                      ss.disabled = ss.disabled ==true?false:true;
+                  }
+              }
+          }
+
+          function toggleCSS(cssFileName) {
+              var stylesheets = document.styleSheets;
+              //var stylesheets = document.querySelector('[rel="stylesheet"]');
+              var length = stylesheets.length;
+              var i;
+
+              for (i = 0; i < length; i++) {
+                  var ss = stylesheets[i];
+                  if (ss.href.includes(cssFileName))
+                  {
+                      ss.disabled = ss.disabled ==true?false:true;
+                  }
+              }
+          }
+
+          function myFunction(id) {
+              var x = document.getElementById(id);
+              if (x.className.indexOf("w3-show") == -1) {
+                  x.className += " w3-show";
+              } else {
+                  x.className = x.className.replace(" w3-show", "");
+              }
+          }
+
+      /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+      function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+              x.style.display = "none";
+          } else {
+              x.style.display = "block";
+          }
+      }
+    </script>
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav ">
+        <a href="#home" class="active">CBA One Cloud Gen 2 - DOT Workspace Capability Map</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <!-- <a href="javascript:toggleCSS('movements')">Toggle Movements</a> -->
+            <!-- <a href="javascript:toggleCSS('clouds_h1')">Toggle Clouds Horizon 1</a> -->
+            <a href="javascript:toggleCSS('hide')">Toggle Hide Tech Services OneCloud has not yet Whitelisted</a>
+            <!-- <a href="javascript:toggleCSS('tech_layer_2.')">Toggle Highlight Tech Layer 2</a> -->
+            <!-- <a href="javascript:toggleCSS('tech_layer_2_hide')">Toggle Hide Tech Layer 2</a> -->
+            <a href="javascript:toggleCSS('workspace_legend')">Toggle Legend Highlights Layer</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="flex-container" style="background-color:black">
+        <p class="title2" style="color:white">Prod Account Tech Services</p>
+        <!-- AWS -->
+        <div style="flex-grow: 10" class="flex-container2Aw">
+            <p class="title2" style="color:white">AWS</p>
+            <!--second level-->
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Marketplace</p>
+                <div class="flts DDN PaaS">
+                    <a href="https://aws.amazon.com/marketplace" target="_blank">AWS Marketplace</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">AI and machine learning</p>
+                <div class="flts DDN PaaS">
+                    <a href="https://aws.amazon.com/sagemaker/" target="_blank">SageMaker</a>
+                </div>
+                <div class="flts DTBD PaaS">
+                    <a href="https://developer.amazon.com/alexa/alexa-skills-kit" target="_blank">Alexa Skills Kit</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Big data and analytics</p>
+                <a href="https://aws.amazon.com/redshift/" target="_blank">Redshift</a>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Compute</p>
+                <div class="flts IaaSComm">
+                    <a href="https://aws.amazon.com/ec2/" target="_blank">Virtual Servers / EC2 Amazon Elastic Compute
+                        Cloud
+                        (EC2)</a>
+                </div>
+                <div class="flts PaaSComm">
+                    <a href="https://aws.amazon.com/lambda/" target="_blank">Serverless / AWS Lambda</a>
+                </div>
+                <div class="flts CaaSComm">
+                    <a href="https://aws.amazon.com/eks/" target="_blank">Containers / EKS Amazon Elastic Kubernetes
+                        Service (EKS)</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Database</p>
+                <div class="flts PaaSComm">
+                    <a href="https://aws.amazon.com/dynamodb/" target="_blank">NoSql / DynamoDB</a>
+                </div>
+                <div class="flts PaaSComm">
+                    <a href="https://aws.amazon.com/mcs/" target="_blank">NoSql / Managed Cassandra</a>
+                </div>
+                <div class="flts PaaSComm">
+                    <a href="https://aws.amazon.com/rds/" target="_blank">Relational / RDS</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Internet of things (IoT)</p>
+                <div class="flts PaaSComm">
+                    <a href="https://aws.amazon.com/kinesis/data-streams/" target="_blank">Kinesis Streams</a>
+                </div>
+                <div class="flts PaaSComm">
+                    <a href="https://aws.amazon.com/kinesis/data-firehose/" target="_blank">Kinesis Firehose</a>
+                </div>                
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Messaging and eventing</p>
+                <div class="flts PaaSComm">
+                    <a href="https://aws.amazon.com/sqs/" target="_blank">Simple Queue Service (SQS)</a>
+                </div>
+                <div class="flts PaaSComm">
+                    <a href="https://aws.amazon.com/sns/" target="_blank">Simple Notification Service (SNS)</a>
+                </div>
+                <div class="flts PaaSComm">
+                    <a href="https://aws.amazon.com/swf/" target="_blank">Simple WorkFlow Service (SWF)</a>
+                </div>
+                <div class="flts PaaSComm">
+                    <a href="https://aws.amazon.com/msk/" target="_blank">Managed KAFKA streaming</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Mobile services</p>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Networking</p>
+                <div class="flts PaaSNonComm">
+                    <a href="https://aws.amazon.com/elasticloadbalancing/" target="_blank">Elastic Load Balancing
+                        (ELB)</a>
+                </div>
+                <div class="flts PaaSComm">
+                    <a href="https://aws.amazon.com/route53/" target="_blank">Route 53 (DNS)</a>
+                </div>       
+                <div class="flts PaaSComm">
+                    <a href="https://aws.amazon.com/cloudfront/" target="_blank">CloudFront (CDN)</a>
+                </div>            
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Security, identity, and access</p>
+                <div class="flts PaaSNonComm ">
+                    <a href="https://aws.amazon.com/cloudhsm/" target="_blank">Encryption / Cloud HSM</a>
+                </div>
+                <div class="flts PaaSNonComm">
+                    <a href="https://aws.amazon.com/secrets-manager/" target="_blank">Encryption / Secrets Manager</a>
+                </div>
+                <div class="flts PaaSNonComm">
+                    <a href="https://aws.amazon.com/iam/" target="_blank">Identity and Access Management (IAM)</a>
+                </div>
+                <div class="flts PaaSNonComm">
+                    <a href="https://aws.amazon.com/identity/federation/" target="_blank">Web Identity Federation/Cognito</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Storage</p>
+                <div class="flts PaaSNonComm">
+                    <a href="https://aws.amazon.com/s3/" target="_blank">Object Storage / S3 - Simple Storage Services
+                        (S3)</a>
+                </div>
+                <div class="flts PaaSNonComm">
+                    <a href="https://aws.amazon.com/efs/" target="_blank">Shared Files / Elastic File System</a>
+                </div>
+                <div class="flts PaaSNonComm">
+                    <a href="https://aws.amazon.com/fsx/" target="_blank">Shared Files / Amazon FSx</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Web applications</p>
+                <div class="flts PaaSComm">
+                    <a href="https://aws.amazon.com/api-gateway/" target="_blank">API Gateway</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Miscellaneous</p>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">C-IAM</p>
+            </div>
+        </div>
+
+        <!-- AZURE -->
+        <div style="flex-grow: 10" class="flex-container2Az">
+            <p class="title2" style="color:white">Azure</p>
+            <!--second level-->
+            <div style="flex-grow: 1" class="flex-container3 ">
+                <p class="title2">Marketplace</p>
+                <div class="flts DDN PaaS hide"><a href="" target="_blank"></a></div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <!--third level-->
+                <p class="title2">AI and machine learning</p>
+                <div class="flts DDN PaaS">
+                    <a href="https://azure.microsoft.com/services/machine-learning-services/" target="_blank">Azure
+                        Machine Learning</a>
+                </div>
+                <div class="flts DTBD PaaS">
+                    <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>
+                </div>
+                <div class="flts DN-P PaaS">
+                    <a href="https://azure.microsoft.com/services/cognitive-services/" target="_blank">Cognitive
+                        Services</a>
+                </div>
+
+
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Big data and analytics</p>
+                <div class="flts PaaS DN-A">
+                    <a href="https://azure.microsoft.com/en-gb/services/stream-analytics/" target="_blank">Analytics and
+                        visualization / Stream analytics</a>
+                </div>
+                <div class="flts PaaS DN-A">
+                    <a href="https://azure.microsoft.com/services/data-factory/" target="_blank">DAzure ata Factory</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Compute</p>
+                <div class="flts IaaSComm DN-TBD">
+                    <a href="https://azure.microsoft.com/services/virtual-machines/" target="_blank">Virtual Servers /
+                        Azure Virtual Machines</a>
+                </div>
+                <div class="flts PaaSComm DN-A">
+                    <a href="https://azure.microsoft.com/services/functions/" target="_blank">Serverless / Azure
+                        Functions</a>
+                </div>
+                <div class="flts CaaSComm DN-TBD">
+                    <a href="https://azure.microsoft.com/services/container-registry/" target="_blank">Containers /
+                        Azure Container Registry</a>
+                </div>
+                <div class="flts CaaSComm DN-TBD">
+                    <a href="https://azure.microsoft.com/services/container-instances/" target="_blank">Containers /
+                        Azure Container Instances</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Database</p>
+                <div class="flts PaaSComm DN-WIP">
+                    <a href="https://azure.microsoft.com/services/cosmos-db/" target="_blank">Multi-model / Azure Cosmos
+                        DB</a>
+                </div>
+                <div class="flts PaaSComm DN-A">
+                    <a href="https://azure.microsoft.com/services/sql-database/" target="_blank">Relational / Azure Sql
+                        Database</a>
+                </div>
+                <div class="flts PaaSComm DN-A">
+                    <a href="https://azure.microsoft.com/services/cache/" target="_blank">Cache / Azure Cache for
+                        Redis</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Internet of things (IoT)</p>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Messaging and eventing</p>
+                <div class="flts PaaSComm DN-A">
+                    <a href="https://azure.microsoft.com/services/event-hubs/" target="_blank">Event Hubs</a>
+                </div>
+                <div class="flts PaaSComm DN-A">
+                    <a href="https://azure.microsoft.com/services/service-bus/" target="_blank">Service Bus</a>
+                </div>
+                <div class="flts PaaSComm DN-NYP">
+                    <a>CBA Managed Kafka (TBD)</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Mobile services</p>
+                <div class="flts PaaSComm DN-A">
+                    <a href="https://docs.microsoft.com/en-us/azure/notification-hubs/" target="_blank">Push /
+                        Notification Hubs</a>
+                </div>
+                <div class="flts DTBD">
+                    <a href="https://docs.microsoft.com/en-us/azure/azure-signalr/" target="_blank">Web / Azure Signal R
+                        Service</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Networking</p>
+                <div class="flts PaaSNonComm DN-A">
+                    <a href="https://docs.microsoft.com/en-us/azure/application-gateway/" target="_blank">Application
+                        Gateway</a>
+                </div>
+                <div class="flts PaaSNonComm DTBD">
+                    <a href="https://docs.microsoft.com/en-us/azure/cdn/" target="_blank">Content Delivery Network</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Security, identity, and access</p>
+                <div class="flts PaaSNonComm DN-A">
+                    <a href="https://aws.amazon.com/cloudhsm/" target="_blank">Encryption / Cloud HSM</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Storage</p>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Web applications</p>
+            </div>
+            <div style="flex-grow: 1" class="flex-container3">
+                <p class="title2">Miscellaneous</p>
+            </div>
+            <div style="flex-grow: 1" class="Azure flex-container3">
+                <p class="title2">C-IAM</p>  <!-- C-IAM Federation approach effectiveness is Product Dependent -->
+            </div>
+
+        </div>
+        <!-- <div style="flex-grow: 10" class="flex-container2Cb">
+            <p class="title2" style="color:white">CBA</p>
+            <div style="flex-grow: 1" class="flex-container3 ">
+                <p class="title2">???</p>
+                <div class="flts DDN PaaS hide"><a href="" target="_blank"></a></div>
+            </div>
+        </div> -->
+
+    </div>
+    <!--     
+    <div class="flex-container" style="background-color:black">
+        <p class="title2" style="color:white">Non Prod Account Tech Services</p>
+    </div>
+    <div class="flex-container" style="background-color:black">
+        <p class="title2" style="color:white">POC Account Tech Services</p>
+    </div> -->
+
+    <!-- ECP -->
+    <div class="flex-container shrink-when-hide" style="background-color:black">
+        <p class="title2" style="color:white">ECP Account Services</p>
+        <div style="flex-grow: 10" class="flex-container2Aw">
+            <p class="title2" style="color:white;">AWS</p>
+            <!--second level-->
+            <div style="flex-shrink: 1" class="Aws flex-container3">
+                <p class="title2">DevOps and application monitoring</p>
+                <div class="flts PaaSNonComm">
+                    <a href="https://aws.amazon.com/codedeploy/" target="_blank">Code Deploy</a>
+                </div>
+                <div class="flts PaaSNonComm">
+                    <a href="https://aws.amazon.com/codecommit/" target="_blank">Code Commit</a>
+                </div>
+                <div class="flts PaaSNonComm">
+                    <a href="https://aws.amazon.com/codepipeline/" target="_blank">Code Pipeline</a>
+                </div>
+            </div>
+            <div style="flex-grow: 1" class="Azure flex-container3">
+                <!--third level-->
+                <p class="title2">Management</p>
+                <!-- </div> -->
+            </div>
+            <div style="flex-grow: 1" class="Azure flex-container3">
+                <p class="title2">Deployment & Rollout, Piloting</p>
+            </div>
+            <div style="flex-grow: 1" class="Azure flex-container3">
+                <p class="title2">Curator</p>
+            </div>
+            <div style="flex-grow: 1" class="Azure flex-container3">
+                <p class="title2">O-IAM</p>
+            </div>
+
+            <!-- CI/CD, RIsk Management , Deployment & Rollout, Piloting, Curator-->
+        </div>
+        <div style="flex-grow: 10" class="flex-container2Az">
+            <p class="title2" style="color:white;">Azure</p>
+            <!--second level-->
+            <div style="flex-shrink: 1" class="Aws flex-container3">
+                <p class="title2">DevOps and application monitoring</p>
+            </div>
+            <div style="flex-grow: 1" class="Azure flex-container3">
+                <!--third level-->
+                <p class="title2">Management</p>
+                <!-- </div> -->
+            </div>
+            <div style="flex-grow: 1" class="Azure flex-container3">
+                <p class="title2">Deployment & Rollout, Piloting</p>
+            </div>
+            <div style="flex-grow: 1" class="Azure flex-container3">
+                <p class="title2">Curator</p>
+            </div>
+            <div style="flex-grow: 1" class="Azure flex-container3">
+                <p class="title2">O-IAM</p>
+            </div>
+        </div>
+
+        <!-- CBA -->
+        <!-- <div style="flex-grow: 10" class="flex-container2Cb">
+            <p class="title2" style="color:white">CBA</p>
+            <div style="flex-grow: 1" class="flex-container3 ">
+                <p class="title2">???</p>
+                <div class="flts DDN PaaS hide"><a href="" target="_blank"></a></div>
+            </div>
+        </div> -->
+    </div>
+<!-- LEGEND -->
+    <div class="flex-container">
+        <p style="color:grey" class="title1V"></p>
+        <div style="flex-grow: 1;border-style:dotted;background-color:lightgrey" class="flex-container2">
+
+            <p class="title2" style="color:black; font-size: larger;">Capability Legend</p>
+            <div style="flex-grow: 1;border-style:none;background-color:lightgrey" class="flex-container3-legend">
+                <!-- <p class="title2">Capability</p> -->
+                <div style="background-color: rgb(201, 192, 113);" class="flts">CBA</div>
+                <div style="background-color: rgb(230, 171, 109);" class="flts">
+                    AWS
+                </div>
+                <div style="background-color: rgb(138, 172, 197);" class="flts">
+                    Azure
+                </div>
+                <div style="background-color: white;" class="flts">
+                    OneCloud Tech Service (AWS, Azure)
+                </div>
+            </div>
+        </div>
+
+        <div style="flex-grow: 1;border-style:dotted;background-color:lightgrey" class="flex-container2">
+            <p class="title2" style="color:black; font-size: larger;">Tech Service Legend</p>
+            
+            <div style="flex-grow: 1;border-style:none;background-color:lightgrey" class="flex-container3-legend">
+                <div class="flts SaaS" style="background-color: lightgrey; color:black; font-size: larger;">SaaS</div>
+                <div class="flts PaaS" style="background-color: lightgrey; color:black; font-size: larger;">PaaS</div>
+                <div class="flts CaaS" style="background-color: lightgrey; color:black; font-size: larger;">CaaS</div>
+                <div class="flts IaaS" style="background-color: lightgrey; color:black; font-size: larger;">IaaS</div>
+
+                <div class="flts whitelisted-commodity-service" style="background-color: lightgrey; color:black; font-size: larger;">Commodity Service</div>
+                <div class="flts whitelisted-non-commodity-service" style="background-color: lightgrey; color:black; font-size: larger;">. Non Commodity Service</div>
+
+                <div class="flts DDN">DOT Does Not Need Tech Service</div>
+                <div class="flts DN-NYP">DOT Does Need these Tech Services - not yet planned by OneCloud and DP</div>
+                <div class="flts DN-P">DOT Does Need these Tech Services - already planned by OneCloud and DP</div>
+                <div class="flts DN-WIP">DOT Does Need these Tech Services - planned and in progress by OneCloud and DP</div>
+                <div class="flts DN-A">DOT Does Need these Tech Services - already available by OneCloud and DP</div>
+                <div class="flts DTBD">DOT TBD whether or not they need these Tech Services</div>
+            </div>
+        </div>
+        <p class="title2" style="color:black">LEGEND</p>
+    </div>
+    </div>
+</body>
+
+</html>

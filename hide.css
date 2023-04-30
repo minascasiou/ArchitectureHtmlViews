@@ -1,0 +1,8 @@
+.hide
+{
+    display:none;
+}
+
+.shrink-when-hide{
+    flex-shrink: 1;
+}
